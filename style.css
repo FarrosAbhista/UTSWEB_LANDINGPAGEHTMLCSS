@@ -1,0 +1,440 @@
+/* Import font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap'); /* FONT */
+
+/* Variabel warna */
+:root {
+    --primary-color: rgba(67, 101, 222, 1);      /* Warna utama */
+    --secondary-color: rgba(246, 249, 255, 1);  /* Warna sekunder */
+    --white-color: rgba(255, 255, 255, 1);      /* Warna putih */
+    --black-color: rgba(38, 38, 38, 1);         /* Warna hitam */
+    --dark-blue-color: rgba(0, 29, 131, 1);     /* Warna biru gelap */
+    --third-color: rgba(217, 229, 255, 1);     /* Warna ketiga */
+    --four-color: #777;                        /* Warna keempat */
+    --primary-font-font-family: "Poppins-Medium", Helvetica; /* Jenis font utama */
+    --primary-font-font-weight: 500;           /* Bobot font utama */
+    --primary-font-font-size: 120px;           /* Ukuran font utama */
+    --primary-font-letter-spacing: 0px;        /* Spasi huruf font utama */
+    --primary-font-line-height: normal;        /* Tinggi baris font utama */
+    --primary-font-font-style: normal;         /* Gaya font utama */
+}
+
+/* default untuk semua elemen */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* dasar untuk elemen body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: C, sans-serif;
+    background-color: #fff1cd; /* Warna latar belakang body */
+}
+
+/* bagian untuk elemen navbar */
+.navbar img {
+    float: left;
+    padding: 10px;
+    max-height: 50px;
+}
+
+.navbar {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 150px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar li {
+    margin: 0 25px; 
+    position: relative;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #1c375c;
+    position: relative;
+}
+
+/* Efek hover pada tautan navbar */
+.navbar li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: -5px;
+    background-color: #1c375c;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar li a:hover::before {
+    transform: scaleX(1);
+}
+
+/*  elemen kelas "home" */
+.home {
+    position: relative;
+    max-width: 1250px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+    flex-direction: column;
+}
+
+/* kontainer di dalam "home" */
+.home .home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* ikon media sosial */
+.home-container .media-icons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.home-container .media-icons a{
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.home-container .media-icons a:hover {
+    color: var(--dark-blue-color);
+}
+
+/*  informasi di dalam "home" */
+.home-container .info h3 {
+    color: var(--four-color);
+    font-feature-settings: 1.3em;
+    word-spacing: 1rem;
+    font-weight: 500;
+    line-height: 50px;
+    font-family: 'Luckiest Guy' ;
+    font-size: 55px;
+    color: #1c375c;
+}
+
+.home-container .info p{
+    color: var(--four-color);
+    font-size: 20px;
+    max-width: 350px;
+    font-family: 'Alata';
+    line-height: 1.5;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+/*  elemen  kelas "flex-center" */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  tombol */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1em;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 20px 30px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: var(--dark-blue-color);
+}
+
+/*  gambar di dalam "home" */
+.home-container .home-img {
+    position: relative;
+}
+
+.home-container .home-img img {
+    width: 100%;
+    transform: translate(0, 0);
+}
+
+/*  tautan "scroll down" di dalam "home" */
+.home .scroll-down {
+    color: var(--black-color);
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.home .scroll-down i {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    animation: arrow-down ease 2s infinite;
+}
+
+/* Animasi panah bawah */
+@keyframes arrow-down{
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(10px);
+    }
+}
+
+/*  elemen dengan kelas "about" */
+.about {
+    background-color: #1c375c;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/*  kontainer di "about" */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  untuk gambar di "about" */
+.about-img img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* + konten teks di "about" */
+.about-content {
+    margin-left: 2rem;
+    text-align: left;
+}
+
+.about h2 {
+    color: #fff1cd;
+    font-size: 2em;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about p {
+    color: #fff1cd;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-family: 'Alata', sans-serif;
+}
+
+/*  elemen  kelas "services" */
+.services {
+    background-color: #fff1cd;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/*  kontainer di dalam "services" */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.services h2 {
+    color: #1c375c;
+    font-size: 2em;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*  elemen  kelas "service-item" */
+.service-item {
+    margin: 2rem;
+    max-width: 300px;
+    text-align: center;
+}
+
+.service-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+    color: #1c375c;
+    font-size: 1.5em;
+    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*  elemen dengan kelas "contact" */
+.contact {
+    background-color: #1c375c;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/*  kontainer di dalam "contact" */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    color: #fff1cd;
+    font-size: 2em;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.contact p {
+    color: #fff1cd;
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-family: 'Alata', sans-serif;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/*  untuk informasi kontak di dalam "contact" */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    font-size: 1.2em;
+    color: #1c375c;
+}
+
+/*  elemen dengan kelas "paw-print" */
+.paw-print {
+    color: #fff1cd;
+}
+
+/*  elemen  "location" */
+.location {
+    background-color: #fff1cd;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.location h2 {
+    color: #1c375c;
+    font-size: 2em;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* elemen dengan kelas "map" */
+.map {
+    margin-top: 2rem;
+    text-align: center;
+}
+/*untuk bagian akhir web*/
+.footer {
+  background-color: #1c375c; /* Warna latar belakang footer */
+  color: #fff1cd; /* Warna teks footer */
+  padding: 20px 0; /* Ruang bawah dan atas di dalam footer */
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px; /* Lebar maksimum footer container */
+  margin: 0 auto; /* Pusatkan footer container di tengah halaman */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 100px; /* Lebar maksimum logo */
+  height: auto;
+}
+
+.footer h4 {
+  font-size: 24px;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer p {
+  font-size: 16px;
+  margin: 5px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.social-icons a {
+  color: #fff1cd;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color:var(--primary-color) ; /* Warna saat dihover */
+}
+.copyright {
+  margin-top: 20px;
+}
+
+/* Media queries untuk layar yang lebih kecil */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar li {
+    margin: 0 10px; 
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
+}
